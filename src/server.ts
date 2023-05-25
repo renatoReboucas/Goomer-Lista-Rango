@@ -3,7 +3,9 @@ import 'dotenv/config'
 import fastify from 'fastify'
 import { restaurantRoutes } from './routes/restaurant'
 
-const app = fastify()
+const app = fastify({
+  logger: true,
+})
 
 app.register(restaurantRoutes)
 
